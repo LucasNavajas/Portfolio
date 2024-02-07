@@ -766,6 +766,7 @@
     .home__line{
         left: -15rem;
         width: 80px;
+        bottom: -4rem;
         rotate: 30deg;
     }
 
@@ -872,6 +873,14 @@
 
     .projects__image{
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .projects__img{
+        max-width: 100%;
+        height: auto;
     }
 
     .projects__content{
@@ -880,6 +889,8 @@
 
     .projects__button{
         right: 1.25rem;
+        width: 42px;
+        height: 42px;
     }
 
     .contact__container{
@@ -951,6 +962,8 @@
     .contact__message{
         bottom: -2.5rem;
     }
+
+    
 
     
 }
