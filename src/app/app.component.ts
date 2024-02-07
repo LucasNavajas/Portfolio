@@ -33,7 +33,6 @@ export class AppComponent{
     }
 
     sections.forEach((current: HTMLElement) => {
-      console.log("se activo")
       const sectionHeight: number = current.offsetHeight;
       const sectionTop: number = current.offsetTop - 58;
       const sectionId: string | null = current.getAttribute('id');

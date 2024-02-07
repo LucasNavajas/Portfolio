@@ -5,6 +5,7 @@
 .footer__container{
     padding-block: 3rem 2rem;
     row-gap: 2.5rem;
+    width: 100%;
 }
 
 .footer__links{

@@ -10,6 +10,5 @@ export class SectionService {
 
   setSections(sections: HTMLElement[]): void {
     this.sections = sections;
-    console.log(this.sections);
   }
 }
