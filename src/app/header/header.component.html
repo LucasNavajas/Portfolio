@@ -5,15 +5,16 @@
             <span class="nav__logo-name">Lucas Navajas.</span>
         </a>
 
+        <button (click)="changeLanguage('en')" class="language__button  nav__link"><img src="../../assets/usa-flag.svg" class="flag"> English</button>
+            <button (click)="changeLanguage('es')" class="language__button nav__link"><img src="../../assets/spain-flag.png" alt="Spanish" class="flag">Español</button> 
+
         <div class="nav__menu" id="nav-menu" #navMenu>
             
             <span class="nav__title">{{'Menu' | translate}}</span>
         
             <h3 class="nav__name">Lucas</h3>
-            
             <ul class="nav__list">
-                <button (click)="changeLanguage('en')">English</button>
-                <button (click)="changeLanguage('es')">Español</button> 
+               
                 <li class="nav__item">
                     <a href="#home" class="nav__link">{{ 'Home' | translate}}</a>
                 </li>
@@ -28,7 +29,7 @@
                 </li>
                 
             </ul>
-
+            
             
             <div class="nav__close" id="nav-close" #navClose>
                 <i class="ri-close-line"></i>

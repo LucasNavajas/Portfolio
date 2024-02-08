@@ -146,6 +146,27 @@
     width: 25%;
 }
 
+
+.flag {
+    width: 20px;
+    margin-right: .25rem;
+  }
+
+.language__button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    border: none;
+    cursor: pointer;
+}
+
+.language__button:hover{
+    color: var(--black-color);
+}
+
 @media screen and (min-width: 1150px){
     .container{
         margin-inline: auto;
