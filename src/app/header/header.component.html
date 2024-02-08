@@ -6,24 +6,30 @@
         </a>
 
         <div class="nav__menu" id="nav-menu" #navMenu>
-            <span class="nav__title">Menu</span>
+            
+            <span class="nav__title">{{'Menu' | translate}}</span>
         
             <h3 class="nav__name">Lucas</h3>
-        
+            
             <ul class="nav__list">
+                <button (click)="changeLanguage('en')">English</button>
+                <button (click)="changeLanguage('es')">Español</button> 
                 <li class="nav__item">
-                    <a href="#home" class="nav__link">Home</a>
+                    <a href="#home" class="nav__link">{{ 'Home' | translate}}</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#about" class="nav__link">About Me</a>
+                    <a href="#about" class="nav__link">{{'AboutMe' | translate}}</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#projects" class="nav__link">Projects</a>
+                    <a href="#projects" class="nav__link">{{'Projects' | translate}}</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+                    <a href="#contact" class="nav__link nav__link-button">{{'ContactMe' | translate}}</a>
                 </li>
+                
             </ul>
+
+            
             <div class="nav__close" id="nav-close" #navClose>
                 <i class="ri-close-line"></i>
             </div>

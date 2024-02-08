@@ -1,5 +1,6 @@
 import { Component, ElementRef,  OnInit, ViewChild } from '@angular/core';
 import ScrollReveal from 'scrollreveal';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,12 @@ export class HeaderComponent {
   @ViewChild('navMenu') navMenu!: ElementRef;
   @ViewChild('navToggle') navToggle!: ElementRef;
   @ViewChild('navClose') navClose!: ElementRef;
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private languageService: LanguageService) {}
 
+  changeLanguage(language: string) {
+    this.languageService.setLanguage(language);
+  }
+  
   ngOnInit() {
     const navLinks: NodeListOf<HTMLElement> = this.elementRef.nativeElement.querySelectorAll('.nav__link');
     const linkAction = () => {

@@ -1,6 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { SectionService } from '../section.service';
+import { LanguageService } from '../language.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
@@ -8,10 +10,11 @@ import { SectionService } from '../section.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  translatedText: string = '';
   contactMessage: any;
   contactForm: any;
 
-  constructor(private sectionService: SectionService) { }
+  constructor(private sectionService: SectionService, private languageService: LanguageService, private translateService: TranslateService) { }
 
   sendEmail(event: Event): void {
     event.preventDefault();
@@ -41,5 +44,13 @@ export class MainComponent implements OnInit {
     this.contactMessage = document.getElementById('contact-message')
     this.contactForm = document.getElementById('contact-form');
     this.contactForm.addEventListener('submit', this.sendEmail.bind(this));
+
+    this.languageService.languageChange$.subscribe(language => {
+      // Cuando cambia el idioma, traduce el texto
+      this.translateService.get('yourTranslationKey').subscribe((translatedText: string) => {
+        // Asigna el texto traducido a la variable translatedText
+        this.translatedText = translatedText;
+      });
+    });
   }
 }
