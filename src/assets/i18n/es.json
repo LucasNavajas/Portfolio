@@ -20,7 +20,7 @@
     "WaterApp": "Aplicación del Ciclo del Agua",
     "WaterTech": "Aplicación Móvil",
     "WaterDescription": "Esta es una aplicación educativa de realidad aumentada para el sistema operativo Android desarrollada en Unity con el módulo Vuforia. Es una aplicación con una pantalla principal que presenta un botón de reproducción, seguido de la activación de la cámara del teléfono. Al escanear el marcador QR con la cámara, se muestra un modelo 3D animado del ciclo del agua. Incluye indicadores que, al tocarlos, muestran un cuadro de diálogo con una breve descripción de la etapa que representa. También incluye botones de interacción para rotar el modelo en todos los ejes o cambiar su tamaño. Lo mismo se puede lograr simplemente deslizando el dedo por la pantalla sobre el modelo o pellizcando la pantalla para aumentar/disminuir su tamaño.",
-    "ContactDesc1": "Leeré todos los correos electrónicos. Envíame cualquier mensaje que desees y me pondré en contacto.",
+    "ContactDesc1": "Leo todos los mails. Envíame cualquier mensaje que desees y me pondré en contacto.",
     "ContactDesc2": "Necesito tu ",
     "Name": "Nombre",
     "And": "Y",

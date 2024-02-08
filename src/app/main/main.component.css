@@ -656,6 +656,10 @@
     .contact__social-description-2{
         color: var(--title-color);
     }
+
+    .contact__description-1{
+        margin-bottom: 1rem;
+    }
   }
 
   @media screen and (min-width: 768px){
