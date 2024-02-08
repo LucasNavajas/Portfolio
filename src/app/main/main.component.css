@@ -612,11 +612,11 @@
  
   }
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 767px){
     .home__container,
     .about__container,
     .projects__container{
-      grid-template-columns: 250px;
+      grid-template-columns: 90%;
       justify-content: center;
     }
 
@@ -631,7 +631,7 @@
     }
   
     .contact__container{
-      grid-template-columns: 300px;
+      grid-template-columns: 90%;
       justify-content: center;
     }
   
