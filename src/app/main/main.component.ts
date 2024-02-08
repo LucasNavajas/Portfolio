@@ -16,20 +16,34 @@ export class MainComponent implements OnInit {
 
   constructor(private sectionService: SectionService, private languageService: LanguageService, private translateService: TranslateService) { }
 
-  sendEmail(event: Event): void {
+  sendEmail(event: Event, language: string): void {
     event.preventDefault();
+    const currentLanguage = this.languageService.getCurrentLanguage();
 
-    emailjs.sendForm('service_n89iscj', 'template_dsjeqet', '#contact-form', '6e_dH15zLHX49ek3B')
-      .then((response: EmailJSResponseStatus) => {
-        this.contactMessage.textContent = 'Message sent successfully ✅';
-        setTimeout(() => {
-          this.contactMessage = '';
-        }, 5000);
-        this.contactForm.reset();
-      }, (error) => {
-        this.contactMessage.textContent = 'Message not sent (service error) ❌';
-      });
-  }
+    if (currentLanguage === 'es') {
+        emailjs.sendForm('service_n89iscj', 'template_dsjeqet', '#contact-form', '6e_dH15zLHX49ek3B')
+            .then((response: EmailJSResponseStatus) => {
+                this.contactMessage.textContent = 'Mensaje enviado correctamente ✅';
+                setTimeout(() => {
+                    this.contactMessage.textContent = '';
+                }, 5000);
+                this.contactForm.reset();
+            }, (error) => {
+                this.contactMessage.textContent = 'Mensaje no enviado (error de servicio) ❌';
+            });
+    } else {
+        emailjs.sendForm('service_n89iscj', 'template_dsjeqet', '#contact-form', '6e_dH15zLHX49ek3B')
+            .then((response: EmailJSResponseStatus) => {
+                this.contactMessage.textContent = 'Message sent successfully ✅';
+                setTimeout(() => {
+                    this.contactMessage.textContent = '';
+                }, 5000);
+                this.contactForm.reset();
+            }, (error) => {
+                this.contactMessage.textContent = 'Message not sent (service error) ❌';
+            });
+    }
+}
 
   ngOnInit(): void {
     const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section[id]');

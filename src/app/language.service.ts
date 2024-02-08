@@ -16,5 +16,9 @@ export class LanguageService {
     localStorage.setItem('language', language); // Opcional: Guarda el idioma en el almacenamiento local
     this.languageChangeSubject.next(language); // Emite el evento de cambio de idioma
   }
+
+  getCurrentLanguage(): string {
+    return this.translate.currentLang;
+  }
 }
 
