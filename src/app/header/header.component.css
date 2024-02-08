@@ -167,6 +167,15 @@
     color: var(--black-color);
 }
 
+@media screen and (max-width: 576px){
+    .flag{
+        width: 15px;
+    }
+    .language__button{
+        font-size: var(--smaller-font-size)
+    }
+}
+
 @media screen and (min-width: 1150px){
     .container{
         margin-inline: auto;
