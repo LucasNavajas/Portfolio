@@ -634,10 +634,6 @@
       grid-template-columns: 300px;
       justify-content: center;
     }
-
-    .contact__mail{
-        width: 100%;
-    }
   
     .contact__group{
       grid-template-columns: repeat(2, 1fr);
@@ -659,6 +655,12 @@
 
     .contact__description-1{
         margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    .contact__mail{
+        width: 100%;
     }
   }
 
