@@ -572,6 +572,15 @@
     left: 0;   
 }
 
+@media screen and (max-width: 380px){
+    .about__shadow{
+        display:none;
+    }
+    .show-scroll{
+        display:none !important;
+    }
+}
+
 @media screen and (max-width: 576px){
     .home__container,
     .about__container,
