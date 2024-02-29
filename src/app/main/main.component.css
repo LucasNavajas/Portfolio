@@ -623,11 +623,14 @@
 
   @media screen and (max-width: 767px){
     .home__container,
-    .about__container,
-    .projects__container{
+    .about__container{
       grid-template-columns: 90%;
       justify-content: center;
     }
+    .projects__container{
+        grid-template-columns: 350px;
+        justify-content: center;
+      }
 
     .home__social-link{
         width: 30px;
@@ -676,11 +679,42 @@
     .contact__mail{
         width: 100%;
     }
+    .porjects__container{
+        grid-template-columns: 350px;
+        justify-content: center;
+      }
   }
 
   @media screen and (min-width: 768px){
-    .porjects__container{
-      grid-template-columns: repeat(2, 350px);
+    .projects__container{
+        grid-template-columns: repeat(3, 352px);
+        padding-block: 3rem 1rem;
+    }
+
+    .projects__card{
+        padding: 1.25rem 1.25rem 2-5rem;
+    }
+
+    .projects__image{
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .projects__img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .projects__content{
+        margin-bottom: 2rem;
+    }
+
+    .projects__button{
+        right: 1.25rem;
+        width: 42px;
+        height: 42px;
     }
   }
 
