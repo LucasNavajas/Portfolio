@@ -20,6 +20,8 @@
     "WaterApp": "Water Cycle App",
     "WaterTech": "Mobile App",
     "WaterDescription": "This is an educational Augmented Reality mobile application for the Android operating system developed in Unity with the Vuforia module. It is a simple functioning app with a main screen featuring a play button, followed by the activation of the cellphone camera. Upon scanning the QR marker with the camera, an animated 3D model of the water cycle is displayed. It includes indicators that, when touched, display a dialogue box with a brief description of the represented stage. It also includes interaction buttons to rotate the model on all axes or change its size. The same can be achieved by simply swiping the finger across the screen over the model or pinching the screen to increase/decrease its size.",
+    "GameLibraryApps" : "REST API",
+    "GameLibraryDescription" : "This project is an API developed in TypeScript with Express and Node.js and using a MongoDB database mounted online in AtlasDB. Basically, there are users, each one with its own library, in which they can add games of a pool in the database. Each user has to register itself with an email, password and a username. Before making any request related to its library, the user must be logged in. The app saves a cookie with the session token of the user logged in. The games have different attributes, such as title, genre, minimum age, release date, etc. The users also have game preferences, defining a preferred genre and a minimum/maximum age. They can consult the API for recommendations based on their preferences.",
     "ContactDesc1": "I will read all emails. Send me any message you want and I'll get back to you.",
     "ContactDesc2": "I need your ",
     "Name": "Name",
